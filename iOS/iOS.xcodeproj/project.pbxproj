@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -119,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C6E312D52426FF1B00286997 /* AppDelegate.swift */,
+				C6E3130F2427C01E00286997 /* LoginView.swift */,
 				C6E312D92426FF1C00286997 /* ViewController.swift */,
 				C6E312D72426FF1C00286997 /* SceneDelegate.swift */,
 				C6E312DB2426FF1C00286997 /* Main.storyboard */,
@@ -126,7 +127,6 @@
 				C6E312E32426FF1E00286997 /* LaunchScreen.storyboard */,
 				C6E312E62426FF1E00286997 /* Info.plist */,
 				C6E312DE2426FF1C00286997 /* iOS.xcdatamodeld */,
-				C6E3130F2427C01E00286997 /* LoginView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -155,7 +155,6 @@
 				5357590676FBFC9BF23DEB82 /* Pods-iOS.debug.xcconfig */,
 				B03622A83A97AA99A35D85E7 /* Pods-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

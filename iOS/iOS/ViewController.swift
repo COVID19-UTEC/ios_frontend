@@ -18,19 +18,18 @@ class ViewController: UIViewController {
         )
     }
     
-    var login: LoginView!
-
+    let login = LoginView(frame: CGRect.zero)
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColorFromRGB(rgbValue: 0xbd0f17)
-        
-        login = LoginView(frame: CGRect.zero)
-        
-        self.view.addSubview(login)
+        self.title = "Login"
+        self.view.backgroundColor = UIColorFromRGB(rgbValue: 0xbd0f17)
+        self.view.addSubview(self.login)
         
         // AutoLayout
         login.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
+        self.view.layoutIfNeeded()
     }
 }
 
