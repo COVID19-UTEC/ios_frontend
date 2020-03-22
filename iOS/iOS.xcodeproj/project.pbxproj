@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		17B55C4F7368235A015E0026 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A783CF0636B330DAD10CB7 /* Pods_iOS.framework */; };
+		933743F82427EE5400EF377E /* COVLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933743F72427EE5400EF377E /* COVLoginController.swift */; };
+		933743FD2427EE7D00EF377E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933743FC2427EE7D00EF377E /* Login.storyboard */; };
+		933744032427F5C200EF377E /* COVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933744022427F5C200EF377E /* COVButton.swift */; };
+		933744052427F60400EF377E /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933744042427F60400EF377E /* UIView+Layer.swift */; };
+		933744072427FFCC00EF377E /* COVTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933744062427FFCC00EF377E /* COVTextfield.swift */; };
+		933744092428005E00EF377E /* UIImage+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933744082428005E00EF377E /* UIImage+Init.swift */; };
 		C6E312D62426FF1B00286997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E312D52426FF1B00286997 /* AppDelegate.swift */; };
-		C6E312D82426FF1C00286997 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E312D72426FF1C00286997 /* SceneDelegate.swift */; };
 		C6E312DA2426FF1C00286997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E312D92426FF1C00286997 /* ViewController.swift */; };
 		C6E312DD2426FF1C00286997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E312DB2426FF1C00286997 /* Main.storyboard */; };
 		C6E312E02426FF1C00286997 /* iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6E312DE2426FF1C00286997 /* iOS.xcdatamodeld */; };
@@ -39,8 +44,14 @@
 
 /* Begin PBXFileReference section */
 		5357590676FBFC9BF23DEB82 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		933743F72427EE5400EF377E /* COVLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVLoginController.swift; sourceTree = "<group>"; };
+		933743FC2427EE7D00EF377E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		933744022427F5C200EF377E /* COVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVButton.swift; sourceTree = "<group>"; };
+		933744042427F60400EF377E /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
+		933744062427FFCC00EF377E /* COVTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVTextfield.swift; sourceTree = "<group>"; };
+		933744082428005E00EF377E /* UIImage+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Init.swift"; sourceTree = "<group>"; };
 		B03622A83A97AA99A35D85E7 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		C6E312D22426FF1B00286997 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E312D22426FF1B00286997 /* COVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E312D52426FF1B00286997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E312D72426FF1C00286997 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C6E312D92426FF1C00286997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +96,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		933743F62427EE4400EF377E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				933743FE2427F2D400EF377E /* Extensions */,
+				933743FA2427EE6B00EF377E /* Presentation */,
+				933743F92427EE6200EF377E /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		933743F92427EE6200EF377E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				933743F72427EE5400EF377E /* COVLoginController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		933743FA2427EE6B00EF377E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				933744012427F5B100EF377E /* Views */,
+				933743FB2427EE7100EF377E /* Storyboards */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		933743FB2427EE7100EF377E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				933743FC2427EE7D00EF377E /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		933743FE2427F2D400EF377E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				933744042427F60400EF377E /* UIView+Layer.swift */,
+				933744082428005E00EF377E /* UIImage+Init.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		933744012427F5B100EF377E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				933744022427F5C200EF377E /* COVButton.swift */,
+				933744062427FFCC00EF377E /* COVTextfield.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA144F12F51B485F27DF0AAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +172,7 @@
 		C6E312D32426FF1B00286997 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6E312D22426FF1B00286997 /* iOS.app */,
+				C6E312D22426FF1B00286997 /* COVID.app */,
 				C6E312EB2426FF1E00286997 /* iOSTests.xctest */,
 				C6E312F62426FF1E00286997 /* iOSUITests.xctest */,
 			);
@@ -118,6 +182,7 @@
 		C6E312D42426FF1B00286997 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				933743F62427EE4400EF377E /* Login */,
 				C6E312D52426FF1B00286997 /* AppDelegate.swift */,
 				C6E312D92426FF1C00286997 /* ViewController.swift */,
 				C6E312D72426FF1C00286997 /* SceneDelegate.swift */,
@@ -155,7 +220,6 @@
 				5357590676FBFC9BF23DEB82 /* Pods-iOS.debug.xcconfig */,
 				B03622A83A97AA99A35D85E7 /* Pods-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -178,7 +242,7 @@
 			);
 			name = iOS;
 			productName = iOS;
-			productReference = C6E312D22426FF1B00286997 /* iOS.app */;
+			productReference = C6E312D22426FF1B00286997 /* COVID.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C6E312EA2426FF1E00286997 /* iOSTests */ = {
@@ -265,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933743FD2427EE7D00EF377E /* Login.storyboard in Resources */,
 				C6E312E52426FF1E00286997 /* LaunchScreen.storyboard in Resources */,
 				C6E312E22426FF1E00286997 /* Assets.xcassets in Resources */,
 				C6E312DD2426FF1C00286997 /* Main.storyboard in Resources */,
@@ -334,10 +399,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933744092428005E00EF377E /* UIImage+Init.swift in Sources */,
 				C6E312DA2426FF1C00286997 /* ViewController.swift in Sources */,
+				933744052427F60400EF377E /* UIView+Layer.swift in Sources */,
 				C6E312D62426FF1B00286997 /* AppDelegate.swift in Sources */,
-				C6E312D82426FF1C00286997 /* SceneDelegate.swift in Sources */,
+				933743F82427EE5400EF377E /* COVLoginController.swift in Sources */,
 				C6E313102427C01E00286997 /* LoginView.swift in Sources */,
+				933744032427F5C200EF377E /* COVButton.swift in Sources */,
+				933744072427FFCC00EF377E /* COVTextfield.swift in Sources */,
 				C6E312E02426FF1C00286997 /* iOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -497,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -515,12 +584,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ABN7RGC99;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "COVID19-UTEC.iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = COVID;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -534,12 +604,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ABN7RGC99;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "COVID19-UTEC.iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = COVID;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

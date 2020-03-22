@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONA-2R-k2K">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="GeC-Cd-fsf">
+            <objects>
+                <viewController id="ONA-2R-k2K" customClass="COVLoginController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uKk-Fk-tya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ouC-g2-7ua">
+                                <rect key="frame" x="24" y="144" width="366" height="244"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country" translatesAutoresizingMaskIntoConstraints="NO" id="TJZ-Uh-NJB">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
+                                        <color key="tintColor" name="COVWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="aEm-9d-eJn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your document type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzD-TL-9la" customClass="COVTextField" customModule="iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="366" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="MBb-qO-cEh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your document ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-bQ-qrc" customClass="COVTextField" customModule="iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="202" width="366" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Sye-lT-pln"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-rK-u1F" customClass="COVButton" customModule="iOS" customModuleProvider="target">
+                                <rect key="frame" x="24" y="778" width="366" height="42"/>
+                                <color key="backgroundColor" name="COVWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Dnc-LZ-j7l"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="ONA-2R-k2K" eventType="touchUpInside" id="Eo5-31-LIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="COVRed"/>
+                        <constraints>
+                            <constraint firstItem="ouC-g2-7ua" firstAttribute="top" secondItem="Qza-Cl-1Ln" secondAttribute="top" constant="100" id="YRZ-et-Ih9"/>
+                            <constraint firstItem="Qza-Cl-1Ln" firstAttribute="bottom" secondItem="IbS-rK-u1F" secondAttribute="bottom" constant="42" id="Z5l-tq-pcC"/>
+                            <constraint firstItem="IbS-rK-u1F" firstAttribute="leading" secondItem="Qza-Cl-1Ln" secondAttribute="leading" constant="24" id="h7w-Pm-H2c"/>
+                            <constraint firstItem="Qza-Cl-1Ln" firstAttribute="trailing" secondItem="IbS-rK-u1F" secondAttribute="trailing" constant="24" id="hGe-gJ-Hxl"/>
+                            <constraint firstItem="ouC-g2-7ua" firstAttribute="leading" secondItem="Qza-Cl-1Ln" secondAttribute="leading" constant="24" id="qpu-wP-gn2"/>
+                            <constraint firstItem="Qza-Cl-1Ln" firstAttribute="trailing" secondItem="ouC-g2-7ua" secondAttribute="trailing" constant="24" id="wkA-iL-1XE"/>
+                            <constraint firstItem="ouC-g2-7ua" firstAttribute="centerX" secondItem="uKk-Fk-tya" secondAttribute="centerX" id="xOy-gk-I7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qza-Cl-1Ln"/>
+                    </view>
+                    <connections>
+                        <outlet property="documentNumberTextfield" destination="ndW-bQ-qrc" id="qnW-4i-GPS"/>
+                        <outlet property="documentTypeTextfield" destination="EzD-TL-9la" id="fww-fa-5cd"/>
+                        <outlet property="loginButton" destination="IbS-rK-u1F" id="bgf-K8-Dss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qA5-aF-VGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="160.71428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="country" width="470" height="471"/>
+        <namedColor name="COVRed">
+            <color red="0.74117647058823533" green="0.058823529411764705" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="COVWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
