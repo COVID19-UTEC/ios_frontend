@@ -9,54 +9,15 @@
 import UIKit
 import PureLayout
 
-class LoginView: UIView {
-    // rgb colors with alpha
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-           return UIColor(
-               red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-               green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-               blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-               alpha: CGFloat(1.0)
-           )
-       }
-    
-    var shouldSetupConstraints = true
-    
-    lazy var peruLogo: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "logo"))
-        imageView.autoSetDimensions(to: CGSize(width: 108.2, height: 108.49))
+class LoginView: BaseView {
+    override func addSubviews() {
+        backgroundColor = UIColorFromRGB(rgbValue: 0xbd0f17)
         
-        return imageView
-    }()
-    
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.autoSetDimension(.height, toSize: 232)
-        view.backgroundColor = .gray // color its just for guides
-        
-        return view
-    }()
-    
-    lazy var idTextField: UITextField! = {
-        let textField = UITextField
-        textField.backgroundColor = UIColorFromRGB(rgbValue: #FFFFFF)
-        return textField
-    }
-    
-    func addSubviews() {
         self.addSubview(peruLogo)
         self.addSubview(containerView)
-        self.bringSubviewToFront(peruLogo)
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+        self.addSubview(idTextField)
         
-        self.addSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.bringSubviewToFront(peruLogo)
     }
     
     override func updateConstraints() {
@@ -70,10 +31,45 @@ class LoginView: UIView {
             peruLogo.autoAlignAxis(toSuperviewAxis: .vertical)
             peruLogo.autoPinEdge(.top, to: .top, of: containerView, withOffset: 20.0)
             
-          
+            idTextField.autoAlignAxis(toSuperviewAxis: .vertical)
+            idTextField.autoPinEdge(.top, to: .bottom, of: peruLogo, withOffset: 34.0)
+
             shouldSetupConstraints = false
         }
         
         super.updateConstraints()
     }
+    
+    lazy var peruLogo: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "logo"))
+        imageView.autoSetDimensions(to: CGSize(width: 108.2, height: 108.49))
+        
+        return imageView
+    }()
+    
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.autoSetDimension(.height, toSize: 232)
+        //view.backgroundColor = .gray // color its just for guides
+        
+        return view
+    }()
+    
+    lazy var idTextField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = UIColorFromRGB(rgbValue: 0xFFFFFF, alphaValue: 0.37)
+        textField.autoSetDimensions(to: CGSize(width: 185.0, height: 40.0))
+        textField.layer.cornerRadius = 10.0
+        textField.keyboardType = UIKeyboardType.numberPad
+        textField.font = UIFont(name: "Roboto", size: 15)
+        textField.textColor = UIColorFromRGB(rgbValue: 0xFFFFFF)
+        
+        // inner padding
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: textField.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = UITextField.ViewMode.always
+        
+        return textField
+    }()
+    
 }

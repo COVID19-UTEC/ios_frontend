@@ -18,13 +18,13 @@ class ViewController: UIViewController {
         )
     }
     
-    let login = LoginView(frame: CGRect.zero)
+    // let login = LoginView(frame: CGRect.zero)
+    let login = HomeView(frame: CGRect.zero)
      
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Login"
-        self.view.backgroundColor = UIColorFromRGB(rgbValue: 0xbd0f17)
         self.view.addSubview(self.login)
         
         // AutoLayout
